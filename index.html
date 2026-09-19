@@ -28,38 +28,22 @@
           <span>Kids' Launchpad</span>
         </a>
 
-        <div class="today" aria-label="Today's date">
-          <span class="today-dot" aria-hidden="true"></span>
-          <span id="today">Ready when you are</span>
+        <div class="header-status">
+          <div class="weather" id="weather" aria-label="Loading weather for 53217" aria-live="polite">
+            <span class="weather-icon" id="weather-icon" aria-hidden="true">◌</span>
+            <span class="weather-copy">
+              <strong id="weather-temp">--°</strong>
+              <span id="weather-condition">53217 weather</span>
+            </span>
+          </div>
+          <div class="today" aria-label="Today's date">
+            <span class="today-dot" aria-hidden="true"></span>
+            <span id="today">Ready when you are</span>
+          </div>
         </div>
       </header>
 
       <main>
-        <section class="hero" aria-labelledby="welcome-title">
-          <div class="hero-copy">
-            <p class="eyebrow">Your space to learn &amp; play</p>
-            <h1 id="welcome-title">What will you<br /><em>discover</em> today?</h1>
-            <p class="hero-note">Pick a tile and jump right in.</p>
-          </div>
-
-          <div class="hero-art" aria-hidden="true">
-            <span class="orbit orbit-one"></span>
-            <span class="orbit orbit-two"></span>
-            <svg class="rocket" viewBox="0 0 220 220">
-              <path class="rocket-shadow" d="M52 176c29-5 61-29 78-50 17-20 32-47 36-72-25 4-52 19-72 36-21 17-45 49-50 78l8 8Z" />
-              <path class="rocket-body" d="M69 143c14-35 43-70 88-84 3 44-17 84-47 106l-41-22Z" />
-              <path class="rocket-nose" d="M157 59c1 17-1 32-6 46l-26-27c10-8 21-15 32-19Z" />
-              <circle class="rocket-window" cx="119" cy="112" r="14" />
-              <path class="rocket-fin" d="m79 127-28 5-14 29 41-10 1-24ZM109 159l-4 30 25-19 1-28-22 17Z" />
-              <path class="rocket-flame flame-one" d="M62 157c-17 8-26 21-29 39 17-5 29-15 36-31l-7-8Z" />
-              <path class="rocket-flame flame-two" d="M72 169c-8 7-12 15-13 26 10-4 18-10 22-20l-9-6Z" />
-              <circle class="spark spark-one" cx="34" cy="83" r="5" />
-              <circle class="spark spark-two" cx="183" cy="134" r="7" />
-              <path class="spark spark-three" d="m58 48 4 9 9 4-9 4-4 9-4-9-9-4 9-4 4-9Z" />
-            </svg>
-          </div>
-        </section>
-
         <section class="favorites" id="favorites" aria-labelledby="favorites-title">
           <div class="section-heading">
             <div>
@@ -185,6 +169,8 @@
         <span>Made for curious minds</span>
         <span class="footer-star" aria-hidden="true">✦</span>
         <span>Have fun learning!</span>
+        <span class="footer-star" aria-hidden="true">✦</span>
+        <a href="https://open-meteo.com/">Weather by Open-Meteo</a>
       </footer>
     </div>
   </body>

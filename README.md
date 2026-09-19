@@ -2,6 +2,8 @@
 
 A small, cheerful Chromebook homepage with quick links to educational apps and games. It is plain HTML, CSS, and JavaScript—there is no build step, no analytics, and no external site assets.
 
+The header shows current weather for ZIP code 53217 using the keyless Open-Meteo API. The coordinates are fixed in `script.js`; the site never requests the child's location. If the weather request fails, the rest of the launchpad continues to work normally.
+
 ## Run locally
 
 Open `index.html` directly, or serve the directory locally:
