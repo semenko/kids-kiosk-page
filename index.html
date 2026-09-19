@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fff9ed" />
+    <meta
+      name="description"
+      content="A cheerful launchpad for learning, reading, creating, and playing."
+    />
+    <title>Kids' Launchpad</title>
+    <link rel="icon" href="icon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#favorites">Skip to activities</a>
+
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="./" aria-label="Kids' Launchpad home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48" role="img">
+              <path d="M24 3 29.8 17.1 45 18.2 33.4 28l3.6 14.8L24 34.7 11 42.8 14.6 28 3 18.2l15.2-1.1L24 3Z" />
+            </svg>
+          </span>
+          <span>Kids' Launchpad</span>
+        </a>
+
+        <div class="today" aria-label="Today's date">
+          <span class="today-dot" aria-hidden="true"></span>
+          <span id="today">Ready when you are</span>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero" aria-labelledby="welcome-title">
+          <div class="hero-copy">
+            <p class="eyebrow">Your space to learn &amp; play</p>
+            <h1 id="welcome-title">What will you<br /><em>discover</em> today?</h1>
+            <p class="hero-note">Pick a tile and jump right in.</p>
+          </div>
+
+          <div class="hero-art" aria-hidden="true">
+            <span class="orbit orbit-one"></span>
+            <span class="orbit orbit-two"></span>
+            <svg class="rocket" viewBox="0 0 220 220">
+              <path class="rocket-shadow" d="M52 176c29-5 61-29 78-50 17-20 32-47 36-72-25 4-52 19-72 36-21 17-45 49-50 78l8 8Z" />
+              <path class="rocket-body" d="M69 143c14-35 43-70 88-84 3 44-17 84-47 106l-41-22Z" />
+              <path class="rocket-nose" d="M157 59c1 17-1 32-6 46l-26-27c10-8 21-15 32-19Z" />
+              <circle class="rocket-window" cx="119" cy="112" r="14" />
+              <path class="rocket-fin" d="m79 127-28 5-14 29 41-10 1-24ZM109 159l-4 30 25-19 1-28-22 17Z" />
+              <path class="rocket-flame flame-one" d="M62 157c-17 8-26 21-29 39 17-5 29-15 36-31l-7-8Z" />
+              <path class="rocket-flame flame-two" d="M72 169c-8 7-12 15-13 26 10-4 18-10 22-20l-9-6Z" />
+              <circle class="spark spark-one" cx="34" cy="83" r="5" />
+              <circle class="spark spark-two" cx="183" cy="134" r="7" />
+              <path class="spark spark-three" d="m58 48 4 9 9 4-9 4-4 9-4-9-9-4 9-4 4-9Z" />
+            </svg>
+          </div>
+        </section>
+
+        <section class="favorites" id="favorites" aria-labelledby="favorites-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Favorites</p>
+              <h2 id="favorites-title">Choose your next adventure</h2>
+            </div>
+            <p class="section-hint">Every tile opens in this tab, so the back button always brings you home.</p>
+          </div>
+
+          <div class="tile-grid featured-grid">
+            <a class="app-card dreambox" href="https://play.dreambox.com/" aria-label="Open DreamBox Math">
+              <span class="card-topline"><span class="category">Math</span><span class="arrow" aria-hidden="true">↗</span></span>
+              <span class="app-icon" aria-hidden="true">
+                <svg viewBox="0 0 64 64"><path d="M14 18h36v28H14z"/><path d="m19 23 13 9 13-9v18H19V23Z"/><path d="M23 15v6M41 15v6"/></svg>
+              </span>
+              <span class="card-title">DreamBox</span>
+              <span class="card-description">Build math superpowers</span>
+              <span class="card-decoration" aria-hidden="true">× ÷ +</span>
+            </a>
+
+            <a class="app-card beast" href="https://beastacademy.com/school" aria-label="Open Beast Academy">
+              <span class="card-topline"><span class="category">Math</span><span class="arrow" aria-hidden="true">↗</span></span>
+              <span class="app-icon" aria-hidden="true">
+                <svg viewBox="0 0 64 64"><path d="M16 30c0-13 8-21 16-21s16 8 16 21v13c0 8-7 13-16 13s-16-5-16-13V30Z"/><path d="m18 21-7-7 2 15M46 21l7-7-2 15"/><circle cx="26" cy="32" r="3"/><circle cx="39" cy="32" r="3"/><path d="M26 44c4 3 8 3 12 0"/></svg>
+              </span>
+              <span class="card-title">Beast Academy</span>
+              <span class="card-description">Tackle mighty math puzzles</span>
+              <span class="card-decoration" aria-hidden="true">◆ △ ●</span>
+            </a>
+
+            <a class="app-card chess" href="https://www.chesskid.com/" aria-label="Open ChessKid">
+              <span class="card-topline"><span class="category">Chess</span><span class="arrow" aria-hidden="true">↗</span></span>
+              <span class="app-icon" aria-hidden="true">
+                <svg viewBox="0 0 64 64"><path d="M22 52h22l-3-8H25l-3 8ZM27 43h12l2-9-5-6 5-5-6-11-12 5 7 7-8 10 5 9Z"/><circle cx="32" cy="19" r="2"/></svg>
+              </span>
+              <span class="card-title">ChessKid</span>
+              <span class="card-description">Learn, think, and make your move</span>
+              <span class="card-decoration pieces" aria-hidden="true">♟ ♞</span>
+            </a>
+
+            <a class="app-card makecode" href="https://arcade.makecode.com/" aria-label="Open Microsoft MakeCode Arcade">
+              <span class="card-topline"><span class="category">Coding</span><span class="arrow" aria-hidden="true">↗</span></span>
+              <span class="app-icon" aria-hidden="true">
+                <svg viewBox="0 0 64 64"><path d="M13 22h38l6 27H7l6-27Z"/><path d="M19 35h12M25 29v12"/><circle cx="43" cy="33" r="3"/><circle cx="49" cy="40" r="3"/><path d="M21 22v-6h22v6"/></svg>
+              </span>
+              <span class="card-title">MakeCode Arcade</span>
+              <span class="card-description">Code your own video games</span>
+              <span class="card-decoration pixel" aria-hidden="true">▦</span>
+            </a>
+
+            <article class="app-card epic has-actions">
+              <span class="card-topline"><span class="category">Reading</span><span class="app-badge">App ready</span></span>
+              <span class="app-icon" aria-hidden="true">
+                <svg viewBox="0 0 64 64"><path d="M10 16c8-2 15 0 22 6 7-6 14-8 22-6v34c-8-2-15 0-22 5-7-5-14-7-22-5V16Z"/><path d="M32 22v33M17 25c4 0 7 1 10 3M17 33c4 0 7 1 10 3M47 25c-4 0-7 1-10 3M47 33c-4 0-7 1-10 3"/></svg>
+              </span>
+              <span class="card-title">Epic Reading</span>
+              <span class="card-description">Find your next great story</span>
+              <span class="epic-actions">
+                <a class="card-action primary" href="intent://www.getepic.com/app/read#Intent;scheme=https;package=com.getepic.Epic;S.browser_fallback_url=https%3A%2F%2Fwww.getepic.com%2Fapp%2Fread;end" aria-label="Open the Epic Reading Android app">Open app</a>
+                <a class="card-action" href="https://www.getepic.com/app/read" aria-label="Open Epic Reading on the web">Use website</a>
+              </span>
+            </article>
+
+            <article class="app-card stardew has-actions">
+              <span class="card-topline"><span class="category">Game</span><span class="app-badge">App ready</span></span>
+              <span class="app-icon" aria-hidden="true">
+                <svg viewBox="0 0 64 64"><path d="M32 54V25"/><path d="M32 34c-12 0-19-6-20-17 12-1 20 4 20 17ZM32 26c1-11 8-17 20-17 0 11-7 17-20 17Z"/><path d="M18 54c2-10 7-15 14-15s12 5 14 15H18Z"/><path d="M11 54h42"/></svg>
+              </span>
+              <span class="card-title">Stardew Valley</span>
+              <span class="card-description">Grow a farm and help a community</span>
+              <span class="epic-actions">
+                <a class="card-action primary" href="intent:#Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;package=com.chucklefish.stardewvalley;S.browser_fallback_url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.chucklefish.stardewvalley;end" aria-label="Open the Stardew Valley Android app">Open app</a>
+                <a class="card-action" href="https://play.google.com/store/apps/details?id=com.chucklefish.stardewvalley" aria-label="View Stardew Valley on Google Play">Play Store</a>
+              </span>
+            </article>
+          </div>
+        </section>
+
+        <section class="explore" aria-labelledby="explore-title">
+          <div class="section-heading compact">
+            <div>
+              <p class="eyebrow">More to explore</p>
+              <h2 id="explore-title">Create something new</h2>
+            </div>
+          </div>
+
+          <div class="tile-grid explore-grid">
+            <a class="mini-card scratch" href="https://scratch.mit.edu/">
+              <span class="mini-icon" aria-hidden="true">🐱</span>
+              <span><strong>Scratch</strong><small>Stories, games &amp; animations</small></span>
+              <span class="arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="mini-card pbs" href="https://pbskids.org/games/">
+              <span class="mini-icon" aria-hidden="true">🎮</span>
+              <span><strong>PBS KIDS Games</strong><small>Play with favorite characters</small></span>
+              <span class="arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="mini-card music" href="https://musiclab.chromeexperiments.com/">
+              <span class="mini-icon" aria-hidden="true">♫</span>
+              <span><strong>Chrome Music Lab</strong><small>Make music and experiment</small></span>
+              <span class="arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="mini-card phet" href="https://phet.colorado.edu/">
+              <span class="mini-icon" aria-hidden="true">⚛</span>
+              <span><strong>PhET Simulations</strong><small>Experiment with science &amp; math</small></span>
+              <span class="arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="mini-card nasa" href="https://science.nasa.gov/kids/">
+              <span class="mini-icon" aria-hidden="true">🚀</span>
+              <span><strong>NASA Kids</strong><small>Explore Earth and space</small></span>
+              <span class="arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="mini-card mathigon" href="https://mathigon.org/">
+              <span class="mini-icon" aria-hidden="true">⬡</span>
+              <span><strong>Mathigon</strong><small>Play in a world of mathematics</small></span>
+              <span class="arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <span>Made for curious minds</span>
+        <span class="footer-star" aria-hidden="true">✦</span>
+        <span>Have fun learning!</span>
+      </footer>
+    </div>
+  </body>
+</html>
