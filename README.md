@@ -16,13 +16,17 @@ Then visit <http://localhost:8000>.
 
 ## Customize
 
-Each tile is an `<a>` element in `index.html`, so destinations and labels are easy to change. Colors and layout live in `styles.css`.
+Destinations and labels live in `index.html`, while colors and layout live in `styles.css`.
 
 The Epic and Stardew Valley tiles include Android launch choices:
 
 - **Open app** uses the verified Android package `com.getepic.Epic` and falls back to Epic's website when supported by the browser.
 - **Use website** always opens the web reader.
-- Stardew Valley's **Open app** action uses the verified `com.chucklefish.stardewvalley` package and falls back to its Google Play listing.
+- Stardew Valley's **Open app** action uses the verified `com.chucklefish.stardewvalley` package and its explicit launcher activity. The Play Store remains available as a separate choice.
+
+The entire Epic and Stardew Valley cards use **Open app** as their default action. Epic exposes a browser-compatible deep link. Stardew Valley does not, so the site makes a best-effort explicit launch of its current `com.chucklefish.stardewvalley.MainActivity`; ChromeOS may block it because the game does not declare that activity as browser-launchable. If blocked, the site explains how to open Stardew from the Chromebook Launcher instead of silently sending the child to the Play Store.
+
+All normal website links open in a new tab so the launchpad remains available.
 
 ChromeOS may open ordinary supported links in an installed Android app if **Settings → Apps → Manage your apps → [app] → Opening supported links** is enabled. Android intent URLs are not consistent across Chromebook models and managed-school policies, so the web option remains visible.
 

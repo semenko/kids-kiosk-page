@@ -60,6 +60,44 @@ a {
   transform: translateY(0);
 }
 
+.app-message {
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  z-index: 30;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  width: min(560px, calc(100% - 2rem));
+  padding: 0.85rem 0.9rem 0.85rem 1rem;
+  border: 1px solid rgba(23, 49, 47, 0.22);
+  border-radius: 1rem;
+  color: white;
+  background: var(--ink);
+  box-shadow: var(--shadow);
+  font-size: 0.8rem;
+  line-height: 1.4;
+  transform: translateX(-50%);
+}
+
+.app-message[hidden] { display: none; }
+
+.app-message button {
+  display: grid;
+  width: 2rem;
+  height: 2rem;
+  flex: 0 0 auto;
+  padding: 0;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+  color: white;
+  background: transparent;
+  font: inherit;
+  font-size: 1.15rem;
+  cursor: pointer;
+}
+
 .page-shell {
   width: min(1180px, calc(100% - 40px));
   margin: 0 auto;
@@ -236,7 +274,9 @@ h2 {
 }
 
 a.app-card:hover,
-a.app-card:focus-visible {
+a.app-card:focus-visible,
+.has-actions:hover,
+.has-actions:focus-within {
   box-shadow: 0 10px 0 rgba(23, 49, 47, 0.12), var(--shadow);
   transform: translateY(-5px);
 }
@@ -244,6 +284,7 @@ a.app-card:focus-visible {
 .app-card:focus-visible,
 .mini-card:focus-visible,
 .card-action:focus-visible,
+.card-default-link:focus-visible,
 .brand:focus-visible {
   outline: 4px solid #2e73d1;
   outline-offset: 4px;
@@ -260,6 +301,23 @@ a.app-card:focus-visible {
 .stardew { background: #b8d77d; }
 
 .has-actions { min-height: 325px; }
+
+.card-default-link {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+}
+
+.has-actions > :not(.card-default-link) {
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.has-actions .epic-actions {
+  pointer-events: auto;
+}
 
 .card-topline {
   z-index: 1;

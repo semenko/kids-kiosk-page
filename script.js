@@ -88,3 +88,16 @@ async function loadWeather() {
 }
 
 loadWeather();
+
+const appMessage = document.querySelector("#app-message");
+const dismissMessage = document.querySelector("#dismiss-message");
+const pageParameters = new URLSearchParams(window.location.search);
+
+if (appMessage && pageParameters.get("stardew") === "manual") {
+  appMessage.hidden = false;
+  window.history.replaceState({}, "", `${window.location.pathname}#favorites`);
+}
+
+dismissMessage?.addEventListener("click", () => {
+  appMessage.hidden = true;
+});
